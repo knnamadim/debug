@@ -1,0 +1,15 @@
+version: 0.1
+projects:
+  - path: examples/terraform
+    terraform_workspace: dev
+
+  - path: examples/terraform
+    terraform_workspace: stage
+    terraform_var_files:
+      - stage.tfvars
+
+  - path: examples/terraform
+    terraform_workspace: prod
+    terraform_var_files:
+      - prod.tfvars
+      - us-east.tfvars
